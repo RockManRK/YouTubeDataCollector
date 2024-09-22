@@ -29,6 +29,7 @@ Before you begin, ensure you have met the following requirements:
 YouTubeDataCollector/
 │
 ├── .env.example                 # Example environment variable file
+├── .gitignore                   # Git ignore rules
 ├── LICENSE                      # License file (MIT)
 ├── requirements.txt             # Python dependencies
 ├── schema.sql                   # SQL script to set up the initial database
