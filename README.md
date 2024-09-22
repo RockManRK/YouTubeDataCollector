@@ -29,7 +29,9 @@ Before you begin, ensure you have met the following requirements:
 YouTubeDataCollector/
 │
 ├── .env.example                 # Example environment variable file
+├── LICENSE                      # License file (MIT)
 ├── requirements.txt             # Python dependencies
+├── schema.sql                   # SQL script to set up the initial database
 ├── youtube_data_download.ipynb  # Main Jupyter notebook with the code
 └── README.md                    # This file
 ```
