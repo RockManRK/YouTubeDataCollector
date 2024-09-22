@@ -16,6 +16,27 @@ CREATE TABLE `channel_stats` (
   PRIMARY KEY (`Channel_ID`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
+-- Table structure for table `videosdata`
+-- Stores detailed information about each video
+CREATE TABLE `videosdata` (
+  `Channel_Handle` varchar(255) NOT NULL,
+  `Video_ID` varchar(50) NOT NULL,
+  `Video_Title` varchar(255) DEFAULT NULL,
+  `Published_At` datetime DEFAULT NULL,
+  `Likes` int DEFAULT NULL,
+  `Duration` varchar(10) DEFAULT NULL,
+  `Views` int DEFAULT NULL,
+  `Comments` int DEFAULT NULL,
+  `Live` tinyint DEFAULT '0',
+  `Short` tinyint DEFAULT '0',
+  `Exclusive` tinyint DEFAULT '0',
+  `Live_Start_Time` datetime DEFAULT NULL,
+  `Live_End_Time` datetime DEFAULT NULL,
+  `Scheduled_Start_Time` datetime DEFAULT NULL,
+  PRIMARY KEY (`Video_ID`),
+  KEY `idx_channel_handle` (`Channel_Handle`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
 -- Table structure for table `tags`
 -- Stores unique tags used in videos with an auto-incrementing ID
 CREATE TABLE `tags` (
@@ -44,24 +65,3 @@ CREATE TABLE `update_log` (
   PRIMARY KEY (`id`),
   UNIQUE KEY `Update_Date_UNIQUE` (`Update_Date`)
 ) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
-
--- Table structure for table `videosdata`
--- Stores detailed information about each video
-CREATE TABLE `videosdata` (
-  `Channel_Handle` varchar(255) NOT NULL,
-  `Video_ID` varchar(50) NOT NULL,
-  `Video_Title` varchar(255) DEFAULT NULL,
-  `Published_At` datetime DEFAULT NULL,
-  `Likes` int DEFAULT NULL,
-  `Duration` varchar(10) DEFAULT NULL,
-  `Views` int DEFAULT NULL,
-  `Comments` int DEFAULT NULL,
-  `Live` tinyint(1) DEFAULT '0',
-  `Short` tinyint(1) DEFAULT '0',
-  `Exclusive` tinyint(1) DEFAULT '0',
-  `Live_Start_Time` datetime DEFAULT NULL,
-  `Live_End_Time` datetime DEFAULT NULL,
-  `Scheduled_Start_Time` datetime DEFAULT NULL,
-  PRIMARY KEY (`Video_ID`),
-  KEY `idx_channel_handle` (`Channel_Handle`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
