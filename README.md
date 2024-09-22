@@ -13,11 +13,10 @@ The primary goal of this project is to serve as a portfolio piece and a learning
 
 ## Technologies Used and Prerequisites
 
-
-Python 3.10.9
-MySQL 8.0.37
-YouTube Data API v3
-Power BI (for visualization, not included in this repository)
+- Python 3.10.9
+- MySQL 8.0.37
+- YouTube Data API v3
+- Power BI (for visualization, not included in this repository)
 
 Before you begin, ensure you have met the following requirements:
 - You have installed Python 3.x.
@@ -30,7 +29,10 @@ Before you begin, ensure you have met the following requirements:
 YouTubeDataCollector/
 │
 ├── .env.example                 # Example environment variable file
+├── .gitignore                   # Git ignore rules
+├── LICENSE                      # License file (MIT)
 ├── requirements.txt             # Python dependencies
+├── schema.sql                   # SQL script to set up the initial database
 ├── youtube_data_download.ipynb  # Main Jupyter notebook with the code
 └── README.md                    # This file
 ```
